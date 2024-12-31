@@ -1,0 +1,136 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\nikit\\Documents\\GitHub\\SatelliteAntennaControlSystem\\WindowsApp\\SatelliteAntennaControlSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C1F84519-54BC-4981-B4B6-84789EF3E83A}|SatelliteAntennaControlSystem.csproj|c:\\users\\nikit\\documents\\github\\satelliteantennacontrolsystem\\windowsapp\\satelliteantennacontrolsystem\\satelittesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1F84519-54BC-4981-B4B6-84789EF3E83A}|SatelliteAntennaControlSystem.csproj|solutionrelative:satelittesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1F84519-54BC-4981-B4B6-84789EF3E83A}|SatelliteAntennaControlSystem.csproj|c:\\users\\nikit\\documents\\github\\satelliteantennacontrolsystem\\windowsapp\\satelliteantennacontrolsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1F84519-54BC-4981-B4B6-84789EF3E83A}|SatelliteAntennaControlSystem.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1F84519-54BC-4981-B4B6-84789EF3E83A}|SatelliteAntennaControlSystem.csproj|c:\\users\\nikit\\documents\\github\\satelliteantennacontrolsystem\\windowsapp\\satelliteantennacontrolsystem\\tcpclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1F84519-54BC-4981-B4B6-84789EF3E83A}|SatelliteAntennaControlSystem.csproj|solutionrelative:tcpclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1F84519-54BC-4981-B4B6-84789EF3E83A}|SatelliteAntennaControlSystem.csproj|c:\\users\\nikit\\documents\\github\\satelliteantennacontrolsystem\\windowsapp\\satelliteantennacontrolsystem\\loadingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C1F84519-54BC-4981-B4B6-84789EF3E83A}|SatelliteAntennaControlSystem.csproj|solutionrelative:loadingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1F84519-54BC-4981-B4B6-84789EF3E83A}|SatelliteAntennaControlSystem.csproj|c:\\users\\nikit\\documents\\github\\satelliteantennacontrolsystem\\windowsapp\\satelliteantennacontrolsystem\\satelitte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1F84519-54BC-4981-B4B6-84789EF3E83A}|SatelliteAntennaControlSystem.csproj|solutionrelative:satelitte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1F84519-54BC-4981-B4B6-84789EF3E83A}|SatelliteAntennaControlSystem.csproj|c:\\users\\nikit\\documents\\github\\satelliteantennacontrolsystem\\windowsapp\\satelliteantennacontrolsystem\\loadingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1F84519-54BC-4981-B4B6-84789EF3E83A}|SatelliteAntennaControlSystem.csproj|solutionrelative:loadingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1F84519-54BC-4981-B4B6-84789EF3E83A}|SatelliteAntennaControlSystem.csproj|C:\\Users\\nikit\\Documents\\GitHub\\SatelliteAntennaControlSystem\\WindowsApp\\SatelliteAntennaControlSystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C1F84519-54BC-4981-B4B6-84789EF3E83A}|SatelliteAntennaControlSystem.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 230,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoadingForm.cs",
+              "DocumentMoniker": "C:\\Users\\nikit\\Documents\\GitHub\\SatelliteAntennaControlSystem\\WindowsApp\\SatelliteAntennaControlSystem\\LoadingForm.cs",
+              "RelativeDocumentMoniker": "LoadingForm.cs",
+              "ToolTip": "C:\\Users\\nikit\\Documents\\GitHub\\SatelliteAntennaControlSystem\\WindowsApp\\SatelliteAntennaControlSystem\\LoadingForm.cs",
+              "RelativeToolTip": "LoadingForm.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAewBYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-31T10:49:28.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoadingForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "DocumentMoniker": "C:\\Users\\nikit\\Documents\\GitHub\\SatelliteAntennaControlSystem\\WindowsApp\\SatelliteAntennaControlSystem\\LoadingForm.cs",
+              "RelativeDocumentMoniker": "LoadingForm.cs",
+              "ToolTip": "C:\\Users\\nikit\\Documents\\GitHub\\SatelliteAntennaControlSystem\\WindowsApp\\SatelliteAntennaControlSystem\\LoadingForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "RelativeToolTip": "LoadingForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-31T10:49:22.971Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TCPclient.cs",
+              "DocumentMoniker": "C:\\Users\\nikit\\Documents\\GitHub\\SatelliteAntennaControlSystem\\WindowsApp\\SatelliteAntennaControlSystem\\TCPclient.cs",
+              "RelativeDocumentMoniker": "TCPclient.cs",
+              "ToolTip": "C:\\Users\\nikit\\Documents\\GitHub\\SatelliteAntennaControlSystem\\WindowsApp\\SatelliteAntennaControlSystem\\TCPclient.cs",
+              "RelativeToolTip": "TCPclient.cs",
+              "ViewState": "AQIAADUAAAAAAAAAAAAwwBIAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-29T20:19:18.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Satelitte.cs",
+              "DocumentMoniker": "C:\\Users\\nikit\\Documents\\GitHub\\SatelliteAntennaControlSystem\\WindowsApp\\SatelliteAntennaControlSystem\\Satelitte.cs",
+              "RelativeDocumentMoniker": "Satelitte.cs",
+              "ToolTip": "C:\\Users\\nikit\\Documents\\GitHub\\SatelliteAntennaControlSystem\\WindowsApp\\SatelliteAntennaControlSystem\\Satelitte.cs",
+              "RelativeToolTip": "Satelitte.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T11:47:40.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SatelitteSystem.cs",
+              "DocumentMoniker": "C:\\Users\\nikit\\Documents\\GitHub\\SatelliteAntennaControlSystem\\WindowsApp\\SatelliteAntennaControlSystem\\SatelitteSystem.cs",
+              "RelativeDocumentMoniker": "SatelitteSystem.cs",
+              "ToolTip": "C:\\Users\\nikit\\Documents\\GitHub\\SatelliteAntennaControlSystem\\WindowsApp\\SatelliteAntennaControlSystem\\SatelitteSystem.cs",
+              "RelativeToolTip": "SatelitteSystem.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAAApwEYAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T11:47:05.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\nikit\\Documents\\GitHub\\SatelliteAntennaControlSystem\\WindowsApp\\SatelliteAntennaControlSystem\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\nikit\\Documents\\GitHub\\SatelliteAntennaControlSystem\\WindowsApp\\SatelliteAntennaControlSystem\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T09:39:37.546Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "DocumentMoniker": "C:\\Users\\nikit\\Documents\\GitHub\\SatelliteAntennaControlSystem\\WindowsApp\\SatelliteAntennaControlSystem\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\Andrey\\Desktop\\SatelliteAntennaControlSystem\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Andrey\\Desktop\\SatelliteAntennaControlSystem\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T09:31:20.16Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
