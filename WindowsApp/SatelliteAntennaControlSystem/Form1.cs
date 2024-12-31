@@ -43,6 +43,8 @@ namespace SatelliteAntennaControlSystem
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
+
             ActualAngleValue.Text = "?";
             ActualHorizontValue.Text = "?";
             SystemStatusLabel.Text = "?";
@@ -55,6 +57,8 @@ namespace SatelliteAntennaControlSystem
             {
                 connectionStatusToolStripMenuItem.Text = "Не подключено";
             }
+
+            
         }
 
         private void ActivatingSystemToolStripMenuItem_Click(object sender, EventArgs e)
@@ -88,7 +92,7 @@ namespace SatelliteAntennaControlSystem
         }
 
         private void connectionStatusToolStripMenuItem_Click(object sender, EventArgs e)
-        {            
+        {
             if (FormSys.client.tcpClient.Connected)
             {
                 connectionStatusToolStripMenuItem.Text = "Подключено";
@@ -108,5 +112,6 @@ namespace SatelliteAntennaControlSystem
         {
             FormSys.client.disconnect();
         }
+
     }
 }

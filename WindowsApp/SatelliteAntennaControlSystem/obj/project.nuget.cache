@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "Nkxymc/HAac=",
+  "dgSpecHash": "7zldFCnDLsg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\nikit\\Documents\\GitHub\\SatelliteAntennaControlSystem\\WindowsApp\\SatelliteAntennaControlSystem\\SatelliteAntennaControlSystem.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Andrey\\Documents\\GitHub\\SatelliteAntennaControlSystem\\WindowsApp\\SatelliteAntennaControlSystem\\SatelliteAntennaControlSystem.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Andrey\\.nuget\\packages\\microsoft.net.sdk.compilers.toolset\\9.0.101\\microsoft.net.sdk.compilers.toolset.9.0.101.nupkg.sha512",
+    "C:\\Users\\Andrey\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.11\\microsoft.windowsdesktop.app.ref.8.0.11.nupkg.sha512",
+    "C:\\Users\\Andrey\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.11\\microsoft.netcore.app.ref.8.0.11.nupkg.sha512",
+    "C:\\Users\\Andrey\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.11\\microsoft.aspnetcore.app.ref.8.0.11.nupkg.sha512",
+    "C:\\Users\\Andrey\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.11\\microsoft.netcore.app.host.win-x64.8.0.11.nupkg.sha512"
+  ],
   "logs": []
 }

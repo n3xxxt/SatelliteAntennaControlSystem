@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SatelliteAntennaControlSystem")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0001e3d2d8ba9a53b6f7fd062daed038060150bd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+27ebba483434ca9e449f6fe7e065327a4c3f7e7a")]
 [assembly: System.Reflection.AssemblyProductAttribute("SatelliteAntennaControlSystem")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SatelliteAntennaControlSystem")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

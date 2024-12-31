@@ -11,8 +11,7 @@ using System.Threading.Tasks;
 namespace SatelliteAntennaControlSystem
 {
     public class SatelitteSystem
-    {
-        LoadingForm loadingForm = new LoadingForm();
+    {      
 
         private static readonly Mutex mutex = new Mutex();
         public TCPclient client;
@@ -41,8 +40,7 @@ namespace SatelliteAntennaControlSystem
         //Серверная информация тоже должная быть здесь (соединение)
 
         public SatelitteSystem()
-        {
-            loadingForm.Show();
+        {   
             try
             {
                 client = new TCPclient("192.168.4.1", 8080);
@@ -54,12 +52,7 @@ namespace SatelliteAntennaControlSystem
             catch (Exception ex) 
             {
                 MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                loadingForm.Close();
-            }
-
+            }           
             
         }
 
@@ -118,7 +111,6 @@ namespace SatelliteAntennaControlSystem
                 return false;
             }
 
-            loadingForm.Show();
 
             try
             {
@@ -135,11 +127,8 @@ namespace SatelliteAntennaControlSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                client.reconnection();
                 return false;
-            }
-            finally
-            {
-                loadingForm.Close();
             }
         }
 
@@ -152,7 +141,6 @@ namespace SatelliteAntennaControlSystem
                 return false;
             }
 
-            loadingForm.Show();                        
 
             try
             {
@@ -168,13 +156,9 @@ namespace SatelliteAntennaControlSystem
             catch (Exception ex)
             {                
                 MessageBox.Show(ex.Message);
+                client.reconnection();
                 return false;
             }
-            finally
-            {
-                loadingForm.Close();
-            }
-
             
         }
 
@@ -188,7 +172,6 @@ namespace SatelliteAntennaControlSystem
                 return false;
             }
 
-            loadingForm.Show();
 
             try
             {
@@ -215,13 +198,9 @@ namespace SatelliteAntennaControlSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                client.reconnection();
                 return false;
             }
-            finally
-            {
-                loadingForm.Close();
-            }
-            
 
         }
 
