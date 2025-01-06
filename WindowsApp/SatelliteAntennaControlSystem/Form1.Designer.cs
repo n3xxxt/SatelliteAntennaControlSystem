@@ -127,8 +127,8 @@
             // connectionStatusToolStripMenuItem
             // 
             connectionStatusToolStripMenuItem.Name = "connectionStatusToolStripMenuItem";
-            connectionStatusToolStripMenuItem.Size = new Size(133, 24);
-            connectionStatusToolStripMenuItem.Text = "Не подключено";
+            connectionStatusToolStripMenuItem.Size = new Size(120, 24);
+            connectionStatusToolStripMenuItem.Text = "Подключение";
             connectionStatusToolStripMenuItem.Click += connectionStatusToolStripMenuItem_Click;
             // 
             // UpAngleButton
@@ -202,7 +202,7 @@
             // 
             StepDegreesLabel.AutoSize = true;
             StepDegreesLabel.Font = new Font("Segoe UI", 12F);
-            StepDegreesLabel.Location = new Point(326, 40);
+            StepDegreesLabel.Location = new Point(341, 37);
             StepDegreesLabel.Name = "StepDegreesLabel";
             StepDegreesLabel.Size = new Size(95, 28);
             StepDegreesLabel.TabIndex = 7;
@@ -211,15 +211,13 @@
             // PointControllerNumericUpDown
             // 
             PointControllerNumericUpDown.DecimalPlaces = 3;
-            PointControllerNumericUpDown.Increment = new decimal(new int[] { 22, 0, 0, 196608 });
-            PointControllerNumericUpDown.Location = new Point(182, 37);
+            PointControllerNumericUpDown.Increment = new decimal(new int[] { 1, 0, 0, 65536 });
+            PointControllerNumericUpDown.Location = new Point(198, 40);
             PointControllerNumericUpDown.Margin = new Padding(3, 4, 3, 4);
             PointControllerNumericUpDown.Maximum = new decimal(new int[] { 90, 0, 0, 0 });
-            PointControllerNumericUpDown.Minimum = new decimal(new int[] { 22, 0, 0, 196608 });
             PointControllerNumericUpDown.Name = "PointControllerNumericUpDown";
             PointControllerNumericUpDown.Size = new Size(137, 30);
             PointControllerNumericUpDown.TabIndex = 6;
-            PointControllerNumericUpDown.Value = new decimal(new int[] { 22, 0, 0, 196608 });
             // 
             // StepPointControlLabel
             // 
@@ -284,28 +282,26 @@
             // SemiAutoHorizontNumericUpDown
             // 
             SemiAutoHorizontNumericUpDown.DecimalPlaces = 3;
-            SemiAutoHorizontNumericUpDown.Increment = new decimal(new int[] { 22, 0, 0, 196608 });
+            SemiAutoHorizontNumericUpDown.Increment = new decimal(new int[] { 1, 0, 0, 65536 });
             SemiAutoHorizontNumericUpDown.Location = new Point(113, 156);
             SemiAutoHorizontNumericUpDown.Margin = new Padding(3, 4, 3, 4);
-            SemiAutoHorizontNumericUpDown.Maximum = new decimal(new int[] { 90, 0, 0, 0 });
-            SemiAutoHorizontNumericUpDown.Minimum = new decimal(new int[] { 22, 0, 0, 196608 });
+            SemiAutoHorizontNumericUpDown.Maximum = new decimal(new int[] { 270, 0, 0, 0 });
+            SemiAutoHorizontNumericUpDown.Minimum = new decimal(new int[] { 90, 0, 0, 0 });
             SemiAutoHorizontNumericUpDown.Name = "SemiAutoHorizontNumericUpDown";
             SemiAutoHorizontNumericUpDown.Size = new Size(137, 30);
             SemiAutoHorizontNumericUpDown.TabIndex = 8;
-            SemiAutoHorizontNumericUpDown.Value = new decimal(new int[] { 22, 0, 0, 196608 });
+            SemiAutoHorizontNumericUpDown.Value = new decimal(new int[] { 90, 0, 0, 0 });
             // 
             // SemiAutoAngleNumericUpDown
             // 
             SemiAutoAngleNumericUpDown.DecimalPlaces = 3;
-            SemiAutoAngleNumericUpDown.Increment = new decimal(new int[] { 22, 0, 0, 196608 });
+            SemiAutoAngleNumericUpDown.Increment = new decimal(new int[] { 1, 0, 0, 65536 });
             SemiAutoAngleNumericUpDown.Location = new Point(113, 77);
             SemiAutoAngleNumericUpDown.Margin = new Padding(3, 4, 3, 4);
             SemiAutoAngleNumericUpDown.Maximum = new decimal(new int[] { 90, 0, 0, 0 });
-            SemiAutoAngleNumericUpDown.Minimum = new decimal(new int[] { 22, 0, 0, 196608 });
             SemiAutoAngleNumericUpDown.Name = "SemiAutoAngleNumericUpDown";
             SemiAutoAngleNumericUpDown.Size = new Size(137, 30);
             SemiAutoAngleNumericUpDown.TabIndex = 7;
-            SemiAutoAngleNumericUpDown.Value = new decimal(new int[] { 22, 0, 0, 196608 });
             // 
             // SemiAutomaticReadingHorizontLabel
             // 
@@ -349,7 +345,7 @@
             // 
             SystemStatusLabel.AutoSize = true;
             SystemStatusLabel.Font = new Font("Segoe UI", 12F);
-            SystemStatusLabel.Location = new Point(232, 89);
+            SystemStatusLabel.Location = new Point(229, 84);
             SystemStatusLabel.Name = "SystemStatusLabel";
             SystemStatusLabel.Size = new Size(21, 28);
             SystemStatusLabel.TabIndex = 5;

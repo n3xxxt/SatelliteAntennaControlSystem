@@ -48,15 +48,10 @@ namespace SatelliteAntennaControlSystem
             ActualAngleValue.Text = "?";
             ActualHorizontValue.Text = "?";
             SystemStatusLabel.Text = "?";
-            if (FormSys.client.tcpClient.Connected)
-            {
-                connectionStatusToolStripMenuItem.Text = "Подключено";
-                refreshDataToolStripMenuItem_Click(sender, e);
-            }
-            else
-            {
-                connectionStatusToolStripMenuItem.Text = "Не подключено";
-            }
+            if (FormSys.client.tcpClient != null)
+            {                                
+                refreshDataToolStripMenuItem_Click(sender, e);                
+            }            
 
             
         }
@@ -76,7 +71,6 @@ namespace SatelliteAntennaControlSystem
 
         private void refreshDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
             FormSys.readInformation();
             refresh_fields();
         }
@@ -85,31 +79,21 @@ namespace SatelliteAntennaControlSystem
         {
             ActualAngleValue.Text = FormSys.angle_value.ToString();
             ActualHorizontValue.Text = FormSys.horizont_value.ToString();
-            //SemiAutoAngleNumericUpDown.Value = (decimal)FormSys.angle_value;
-            //SemiAutoHorizontNumericUpDown.Value = (decimal)FormSys.horizont_value;
+            SemiAutoAngleNumericUpDown.Value = (decimal)FormSys.angle_value;
+            SemiAutoHorizontNumericUpDown.Value = (decimal)FormSys.horizont_value;
             if (FormSys.is_activated) { SystemStatusLabel.Text = "Включено"; }
             else { SystemStatusLabel.Text = "Выключено"; }
         }
 
         private void connectionStatusToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (FormSys.client.tcpClient.Connected)
-            {
-                connectionStatusToolStripMenuItem.Text = "Подключено";
-                MessageBox.Show("Подключено");
-                refreshDataToolStripMenuItem_Click(sender, e);
-
-            }
-            else
-            {
-                connectionStatusToolStripMenuItem.Text = "Не подключено";
-                MessageBox.Show("Не подключено, попытка переподключения");
-                FormSys.client.reconnection();
-            }
+        {            
+            MessageBox.Show("Переподключаемся");
+            FormSys.client.reconnection();            
         }
 
         private void MainControlPanel_FormClosed(object sender, FormClosedEventArgs e)
         {
+            FormSys.sReading = false;
             FormSys.client.disconnect();
         }
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
+using System.IO.Pipes;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Sockets;
@@ -31,6 +32,7 @@ namespace SatelliteAntennaControlSystem
         private float MIN_HORIZONT { get; set; }
 
         public bool is_activated { get; set; }
+        public bool sReading { get; set; }
 
         public float horizont_value { get; set; }
         public float angle_value { get; set; }
@@ -44,9 +46,15 @@ namespace SatelliteAntennaControlSystem
             try
             {
                 client = new TCPclient("192.168.4.1", 8080);
+                sReading = true;
+
+                horizont_value = 90;
+
+
                 var readThread = new Thread(serverReading);
                 readThread.Start();
-            
+
+
                 readInformation();
             }
             catch (Exception ex) 
@@ -61,38 +69,65 @@ namespace SatelliteAntennaControlSystem
             try
             {
                 byte[] buffer = new byte[256];
-                while (client.tcpClient.Connected)
+                while (sReading)
                 {
-                    //mutex.WaitOne();
-                    int bytesRead = client.stream.Read(buffer, 0, buffer.Length);
-                    if (bytesRead > 0)
+                    if (client.tcpClient != null & client.stream != null)
                     {
-                        string response = Encoding.UTF8.GetString(buffer, 0, bytesRead);
-                        if (response.StartsWith("SYSTEM_INFORMATION"))
-                        {
-                            var inf = response.Split(";");
-                            angle_value = float.Parse(inf[ACTUAL_ANGLE_INDEX].Replace(".",","));
-                            horizont_value = float.Parse(inf[ACTUAL_HORIZONT_INDEX].Replace(".", ","));
-                            is_activated = bool.Parse(inf[IS_SYSTEM_ACTIVATED_INDEX]);
-                            //MessageBox.Show($"{inf[IS_SYSTEM_ACTIVATED_INDEX]} + {is_activated.ToString()}");                            
-                            MAX_ANGLE = int.Parse(inf[MAX_ANGLE_INDEX]);
-                            MIN_ANGLE = int.Parse(inf[MIN_ANGLE_INDEX]);
-                            MAX_HORIZONT = int.Parse(inf[MAX_HORIZONT_INDEX]);
-                            MIN_HORIZONT = int.Parse(inf[MIN_HORIZONT_INDEX]);
-                        }
-                        else
-                        {
-                            switch (response)
-                            {
-                                case (""): break;
-                            }
-                        }
                         
+                        //mutex.WaitOne();
+                        int bytesRead = client.stream.Read(buffer, 0, buffer.Length);
+                        if (bytesRead > 0)
+                        {
+                            string response = Encoding.UTF8.GetString(buffer, 0, bytesRead);
+
+                            if (response.StartsWith("SYSTEM_INFORMATION"))
+                            {
+                                var inf = response.Split(";");
+                                angle_value = float.Parse(inf[ACTUAL_ANGLE_INDEX].Replace(".", ","));
+                                horizont_value = float.Parse(inf[ACTUAL_HORIZONT_INDEX].Replace(".", ","));
+                                is_activated = bool.Parse(inf[IS_SYSTEM_ACTIVATED_INDEX]);
+                                MAX_ANGLE = int.Parse(inf[MAX_ANGLE_INDEX]);
+                                MIN_ANGLE = int.Parse(inf[MIN_ANGLE_INDEX]);
+                                MAX_HORIZONT = int.Parse(inf[MAX_HORIZONT_INDEX]);
+                                MIN_HORIZONT = int.Parse(inf[MIN_HORIZONT_INDEX]);
+                            }
+                            else
+                            {
+                                MessageBox.Show(response);
+                                switch (response)
+                                {
+                                    case ("POSITION_IS_SET"):
+                                        {
+                                            MessageBox.Show("Положение антенны установлено");
+                                            break;
+                                        }
+                                    case ("SYSTEM_ACTIVATED"):
+                                        {
+                                            is_activated = true;
+                                            MessageBox.Show("Система активирована");
+                                            break;
+                                        }
+                                    case ("SYSTEM_DEACTIVATED"):
+                                        {
+                                            is_activated = false;
+                                            MessageBox.Show("Система дективирована");
+                                            break;
+                                        }
+                                    case ("ERROR_IN_SETTING_POSITION"):
+                                        {
+                                            MessageBox.Show("Ошибка при установке положения антенны");
+                                            break;
+                                        }
+
+                                }//switch
+                            }// if response
+                        }// if butesRead > 0
+                        //mutex.ReleaseMutex();
                         
 
-                    }
-                    //mutex.ReleaseMutex();
-                }
+                    }// if tcpClient != null
+
+                }// while sReading
             }
             catch (Exception ex)
             {
@@ -104,24 +139,25 @@ namespace SatelliteAntennaControlSystem
         public bool readInformation()
         {
 
-            if (!client.tcpClient.Connected)
-            {
-                MessageBox.Show("Не установлено подключение с сервером");
-                client.reconnection();
-                return false;
-            }
-
-
             try
             {
-                // Пытаемся захватить мьютекс
-                mutex.WaitOne();
+                if (client.tcpClient == null)
+                {
+                    MessageBox.Show("Не установлено подключение с сервером");
+                    client.reconnection();
+                    return false;
+                }
+                else
+                {
+                    // Пытаемся захватить мьютекс
+                    mutex.WaitOne();
 
-                client.sendMessage("CHECK_SYSTEM");
+                    client.sendMessage("CHECK_SYSTEM");
 
-                mutex.ReleaseMutex(); // Освобождаем мьютекс
+                    mutex.ReleaseMutex(); // Освобождаем мьютекс
 
-                return true;
+                    return true;
+                }// if (client.tcpClient == null)                  
                 
             }
             catch (Exception ex)
@@ -134,23 +170,24 @@ namespace SatelliteAntennaControlSystem
 
         public bool rotate(float angle, float horizont)
         {
-            if (!client.tcpClient.Connected)
-            {
-                MessageBox.Show("Не установлено подключение с сервером");
-                client.reconnection();
-                return false;
-            }
-
-
             try
             {
-                // Пытаемся захватить мьютекс
-                mutex.WaitOne();
+                if (client.tcpClient == null)
+                {
+                    MessageBox.Show("Не установлено подключение с сервером");
+                    client.reconnection();
+                    return false;
+                }
+                else
+                {
+                    // Пытаемся захватить мьютекс
+                    mutex.WaitOne();
 
-                client.sendMessage($"SET_POSITION;{angle};{horizont}");
+                    client.sendMessage($"SET_POSITION;{angle};{horizont}");
 
-                mutex.ReleaseMutex(); // Освобождаем мьютекс
-                return true;
+                    mutex.ReleaseMutex(); // Освобождаем мьютекс
+                    return true;
+                }// if (client.tcpClient == null)
 
             }
             catch (Exception ex)
@@ -165,34 +202,36 @@ namespace SatelliteAntennaControlSystem
         public bool systemActivateDeactivate()
         {
 
-            if (!client.tcpClient.Connected)
-            {
-                MessageBox.Show("Не установлено подключение с сервером");
-                client.reconnection();
-                return false;
-            }
-
-
             try
             {
-                // Пытаемся захватить мьютекс
-                mutex.WaitOne();
-                
-                if (!is_activated)
-                {                    
-                    client.sendMessage("ACTIVATE_SYSTEM");
-                    is_activated = true;
-                    mutex.ReleaseMutex(); // Освобождаем мьютекс
-                    return is_activated;
+
+            
+                if (client.tcpClient == null)
+                {
+                    MessageBox.Show("Не установлено подключение с сервером");
+                    client.reconnection();
+                    return false;
                 }
                 else
                 {
-                    client.sendMessage("DEACTIVATE_SYSTEM");
-                    is_activated = false;
-                    mutex.ReleaseMutex(); // Освобождаем мьютекс
-                    return is_activated;
-                }
-                    
+                    // Пытаемся захватить мьютекс
+                    mutex.WaitOne();
+
+                    if (!is_activated)
+                    {
+                        client.sendMessage("ACTIVATE_SYSTEM");
+                        is_activated = true;
+                        mutex.ReleaseMutex(); // Освобождаем мьютекс
+                        return is_activated;
+                    }
+                    else
+                    {
+                        client.sendMessage("DEACTIVATE_SYSTEM");
+                        is_activated = false;
+                        mutex.ReleaseMutex(); // Освобождаем мьютекс
+                        return is_activated;
+                    }
+                }// if (client.tcpClient == null)                  
                 
             }
             catch (Exception ex)

@@ -36,7 +36,7 @@ namespace SatelliteAntennaControlSystem
         {
             try
             {
-                tcpClient.Close();
+                tcpClient?.Close();
                 return true;
             }
             catch (Exception ex)
@@ -47,7 +47,7 @@ namespace SatelliteAntennaControlSystem
 
         public void sendMessage(string message)
         {
-            if (!tcpClient.Connected) return;
+            if (!tcpClient.Connected | tcpClient == null) return;
 
             try
             {
@@ -63,13 +63,21 @@ namespace SatelliteAntennaControlSystem
 
         public void reconnection()
         {         
-            if (tcpClient.Connected) 
-                tcpClient.Close();
+            tcpClient?.Close();
+
             try
             {
                 tcpClient = new TcpClient(serverIp, port);
                 stream = tcpClient.GetStream();
-                MessageBox.Show("Подключено");
+                if (tcpClient != null)
+                {
+                    MessageBox.Show("Подключено");
+                }
+                else
+                {
+                    MessageBox.Show("Подключение не установлено");
+                }
+                
             }
             catch (Exception ex)
             {

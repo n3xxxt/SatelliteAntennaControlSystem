@@ -65,3 +65,4 @@ C:\Users\Andrey\Documents\GitHub\SatelliteAntennaControlSystem\WindowsApp\Satell
 C:\Users\Andrey\Documents\GitHub\SatelliteAntennaControlSystem\WindowsApp\SatelliteAntennaControlSystem\obj\Debug\net8.0-windows\SatelliteAntennaControlSystem.pdb
 C:\Users\Andrey\Documents\GitHub\SatelliteAntennaControlSystem\WindowsApp\SatelliteAntennaControlSystem\obj\Debug\net8.0-windows\SatelliteAntennaControlSystem.genruntimeconfig.cache
 C:\Users\Andrey\Documents\GitHub\SatelliteAntennaControlSystem\WindowsApp\SatelliteAntennaControlSystem\obj\Debug\net8.0-windows\ref\SatelliteAntennaControlSystem.dll
+C:\Users\Andrey\Documents\GitHub\SatelliteAntennaControlSystem\WindowsApp\SatelliteAntennaControlSystem\obj\Debug\net8.0-windows\SatelliteAntennaControlSystem.LoadingForm.resources
